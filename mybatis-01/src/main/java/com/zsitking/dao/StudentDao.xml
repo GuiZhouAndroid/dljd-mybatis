@@ -7,4 +7,9 @@
     <select id="selectAllData" resultType="com.zsitking.entity.Student">
         select id,name,email,age from student order by age;
     </select>
+
+    <insert id="addStudent">
+--         insert into student values (120,"王五","12345678qq.com",30);
+        insert into student values (#{id},#{name},#{email},#{age});
+    </insert>
 </mapper>

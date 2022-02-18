@@ -10,4 +10,7 @@ import java.util.List;
 public interface StudentDao {
     //查询student表全部数据
     public List<Student> selectAllData();
+
+    //添加
+    public int addStudent(Student student);
 }
