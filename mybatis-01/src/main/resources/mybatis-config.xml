@@ -24,7 +24,7 @@
                 <!-- 数据库的驱动类名 -->
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <!-- 连接数据库的url字符串 -->
-                <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf8"/>
                 <!-- 数据库连接用户名你 -->
                 <property name="username" value="root"/>
                 <!-- 数据库连接密码 -->
