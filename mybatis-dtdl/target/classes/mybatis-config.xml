@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--配置数据库映射参数-->
+<configuration>
+    <!-- settings : 控制mybatis全局行为 -->
+    <settings>
+        <!-- 输入日志，打印到控制台-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <!--
+    环境配置：数据库的连接信息
+    default:必须和某个environment的id值一样。
+    告诉mybatis使用哪个数据库的连接信息。也就是访问哪个数据库
+-->
+    <environments default="mydev">
+        <!-- 单个环境参数配置
+        transactionManager : mybatis的事务类型
+        type: JDBC(表示使用jdbc中的Connection对象的commit , rollback做事务处理)
+        -->
+        <environment id="mydev">
+            <transactionManager type="JDBC"/>
+            <!--
+                dataSource:表示数据源,连接数据库的
+                type:表示数据源的类型，POOLED表示使用连接池
+            -->
+            <dataSource type="POOLED">
+                <!-- 数据库的驱动类名 -->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <!-- 连接数据库的url字符串 -->
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf8"/>
+                <!-- 数据库连接用户名你 -->
+                <property name="username" value="root"/>
+                <!-- 数据库连接密码 -->
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+        <!-- 其它环境参数配置 -->
+
+    </environments>
+
+    <mappers>
+        <mapper resource="com/zsitking/dao/StudentDao.xml"/>
+    </mappers>
+</configuration>
