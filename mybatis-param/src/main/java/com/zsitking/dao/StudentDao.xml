@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zsitking.dao.StudentDao">
+
+    <!-- parameterType: dao接口中方法参数返回的数据类型，是java数据类型全限定名称(包名.类名)或定义的别名，如int(Mybatis官方文档注明的)
+        该参数不是强制的，mybatis通过反射机制能够发现参数的数据类型，一般不用写。
+    -->
+    <select id="selectStudentById" resultType="com.zsitking.entity.Student" parameterType="java.lang.Integer">
+        select id,name,email,age from student where id=#{id} ;
+    </select>
+
+
+</mapper>

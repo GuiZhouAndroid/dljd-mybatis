@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mybatis-02" />
         <module name="mybatis-dtdl" />
+        <module name="mybatis-param" />
         <module name="mybatis-01" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
       <module name="mybatis-01" target="1.8" />
       <module name="mybatis-02" target="1.8" />
       <module name="mybatis-dtdl" target="1.8" />
+      <module name="mybatis-param" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

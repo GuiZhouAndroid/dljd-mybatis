@@ -8,7 +8,6 @@ public interface StudentDao {
 
     public List<Student> selectAll();
 
-
     //添加
     public int addStudent(Student student);
 }
